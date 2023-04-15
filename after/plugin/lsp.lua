@@ -37,16 +37,16 @@ lsp.on_attach(function(client, bufnr)
     lsp_opts('Go to Definition'))
 	vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end,
     lsp_opts('Hover'))
-	vim.keymap.set("n", "<leader>vws",
+	vim.keymap.set("n", "<leader>ws",
     function() vim.lsp.buf.workspace_symbol() end, lsp_opts('Workspace Symbols'))
 	vim.keymap.set("n", "<leader>vd", function() vim.lsp.diagnostic.open_float() end, opts)
-	vim.keymap.set("n", "[d", function() vim.lsp.diagnostic.goto_next() end, opts)
-	vim.keymap.set("n", "]d", function() vim.lsp.diagnostic.goto_prev() end, opts)
+	vim.keymap.set("n", "´d", function() vim.lsp.diagnostic.goto_next() end, opts)
+	vim.keymap.set("n", "`d", function() vim.lsp.diagnostic.goto_prev() end, opts)
 	vim.keymap.set("n", "<leader>vca",
     function() vim.lsp.buf.code_actions() end, lsp_opts('Code Actions'))
-	vim.keymap.set("n", "<leader>vrr",
+	vim.keymap.set("n", "<leader>gr",
     function() vim.lsp.buf.references() end, lsp_opts('View References'))
-	vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end,
+	vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end,
     lsp_opts('Refactor Rename'))
 	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end,
     lsp_opts('Show keyword signature'))

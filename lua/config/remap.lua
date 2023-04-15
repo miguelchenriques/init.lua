@@ -41,3 +41,32 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+local set = vim.keymap.set
+
+-- Move to window using the <ctrl> hjkl keys
+set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
+set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })
+set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
+set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
+
+-- Resize window using <ctrl> arrow keys
+set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
+set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
+set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+
+-- windows
+set("n", "<leader>ww", "<C-W>p", { desc = "Other window" })
+set("n", "<leader>wd", "<C-W>c", { desc = "Delete window" })
+set("n", "<leader>w-", "<C-W>s", { desc = "Split window below" })
+set("n", "<leader>w|", "<C-W>v", { desc = "Split window right" })
+
+-- tabs
+set("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last Tab" })
+set("n", "<leader><tab>f", "<cmd>tabfirst<cr>", { desc = "First Tab" })
+set("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New Tab" })
+set("n", "<leader><tab>6", "<cmd>tabnext<cr>", { desc = "Next Tab" })
+set("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close Tab" })
+set("n", "<leader><tab>4", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+

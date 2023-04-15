@@ -41,8 +41,15 @@ return require('packer').startup(function(use)
   }
 }
 
+    -- Autoclose brackets
     use 'm4xshen/autoclose.nvim'
 
+    -- Git integration
     use 'tpope/vim-fugitive'
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
 end)
