@@ -47,9 +47,17 @@ return require('packer').startup(function(use)
     -- Git integration
     use 'tpope/vim-fugitive'
 
+    -- Status line
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+
+    -- File explorer
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
+
 
 end)
