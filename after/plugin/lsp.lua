@@ -62,7 +62,17 @@ require'lspconfig'.lua_ls.setup {
 	}
 }
 
-require'lspconfig'.pylsp.setup{}
+require'lspconfig'.pylsp.setup{
+    settings = {
+        pylsp = {
+            plugins = {
+                rope_autoimport = {
+                    enabled = true
+                }
+            }
+        }
+    }
+}
 
 
 lsp.setup()
