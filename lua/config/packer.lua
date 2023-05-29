@@ -65,4 +65,17 @@ return require('packer').startup(function(use)
 
     -- Terminal
     use "akinsho/toggleterm.nvim"
+
+
+    -- Debugger
+    use 'mfussenegger/nvim-dap'
+    use 'mfussenegger/nvim-dap-python'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 end)
