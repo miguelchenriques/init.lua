@@ -37,6 +37,7 @@ M.telescope = {
   n = {
     ["<leader>fr"] = {"<cmd> Telescope lsp_references <CR>", "Find references"},
     ["<leader>fs"] = {"<cmd> Telescope lsp_document_symbols <CR>", "Find document symbols"},
+    ["<leader>fi"] = {"<cmd> Telescope lsp_implementations <CR>", "Find implementations"},
   }
 }
 
